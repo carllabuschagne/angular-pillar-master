@@ -10,6 +10,8 @@ import { OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { CardModule } from 'primeng/card';
+import { environment } from '../environments/environment';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -23,27 +25,33 @@ import { CardModule } from 'primeng/card';
     AccordionModule,
     MenubarModule,
     MenuModule,
-    CardModule
+    CardModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  title = 'Pillar';
+  title = environment.title;
 
   items: MenuItem[] | undefined;
 
   links: MenuItem[] | undefined;
+
+  constructor(private titleService: Title) {
+    this.titleService.setTitle(this.title);
+  }
 
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: '/',
       },
       {
-        label: 'Features',
+        label: 'About',
         icon: 'pi pi-star',
+        routerLink: '/about',
       },
       {
         label: 'Projects',
@@ -82,19 +90,22 @@ export class AppComponent implements OnInit {
         icon: 'pi pi-envelope',
       },
     ];
-    
+
     this.links = [
-      {
-        label: 'Home',
-        icon: 'pi pi-home',
-      },
       {
         label: 'Log In',
         icon: 'pi pi-star',
+        routerLink: '/login',
       },
       {
         label: 'Logout',
         icon: 'pi pi-envelope',
+        routerLink: '/login',
+      },
+      {
+        label: 'Settings',
+        icon: 'pi pi-cog',
+        routerLink: '/settings',
       },
     ];
   }

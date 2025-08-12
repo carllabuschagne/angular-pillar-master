@@ -12,7 +12,7 @@ import { MenuModule } from 'primeng/menu';
 import { CardModule } from 'primeng/card';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-settings',
   standalone: true,
   imports: [
     ButtonModule,
@@ -24,7 +24,9 @@ import { CardModule } from 'primeng/card';
     MenuModule,
     CardModule,
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  templateUrl: './settings.component.html',
+  styleUrl: './settings.component.css'
 })
-export class HomeComponent {}
+export class SettingsComponent {
+
+}
