@@ -1,2 +1,128 @@
+<div class="container">
 
-<div class="glass-card">about works!</div>
+
+    <div class="content">
+        <h1>Neon/Glowing Light</h1>
+        <h3>Colored shadows create glowing light</h3>
+    </div>
+
+
+
+    <div class="custom-btn btn-14">
+        <p>asdasd asd asd asd asd asd a sasdasdasd asd asd s
+            asd as d asd asd
+            a sd asd asd asd asd asd
+            a sd asd asd asd asd
+            asdasd as dasd
+        </p>
+    </div>
+    <div class="custom-btn btn-14">
+        <p>asdasd asd asd asd asd asd a sasdasdasd asd asd s
+            asd as d asd asd
+            a sd asd asd asd asd asd
+            a sd asd asd asd asd
+            asdasd as dasd
+        </p>
+    </div>
+    <div class="custom-btn btn-14">
+        <p>asdasd asd asd asd asd asd a sasdasdasd asd asd s
+            asd as d asd asd
+            a sd asd asd asd asd asd
+            a sd asd asd asd asd
+            asdasd as dasd
+        </p>
+    </div>
+
+
+</div>
+<style>
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: 20%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 1em;
+        box-shadow: 0px 0px 10px 5px rgba(253, 253, 253, 0.3);
+    }
+
+    .content h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #e0ffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3), 0px 0px 20px #fff;
+        margin: 3px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+        color: #e0ffff;
+    }
+
+
+    .custom-btn {
+        color: #fff;
+        width: 20%;
+        height: 40%;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* 14 */
+    .btn-14 {
+        position: relative;
+        color: #e0ffff;
+        text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3), 0px 0px 10px #fff;
+        border: none;
+        z-index: 2;
+    }
+
+    .btn-14:before,
+    .btn-14:after {
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 20%;
+        border: 2px solid;
+
+        z-index: -1;
+        transition: all 0.3s ease;
+    }
+
+    .btn-14:before {
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: #00aced;
+        border-left-color: #00aced;
+    }
+
+    .btn-14:after {
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: #00aced;
+        border-right-color: #00aced;
+    }
+
+    .btn-14:hover:before,
+    .btn-14:hover:after {
+        border-color: #00aced;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 0 5px #00aced, 0 0 5px #00aced;
+    }
+</style>
