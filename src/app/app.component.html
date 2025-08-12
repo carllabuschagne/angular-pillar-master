@@ -1,0 +1,19 @@
+<p-menubar [model]="items">
+  <div class="flex items-center align-middle gap-2">
+    <i class="pi pi-cog" style="font-size: 1.5rem; margin-right: 10px;"></i>
+    <i class="pi pi-bell" style="font-size: 1.5rem; margin-right: 10px;"></i>
+    <i class="pi pi-code" style="font-size: 1.5rem; margin-right: 10px; cursor: pointer;" (click)="menu.toggle($event)"></i>
+    <p-menu #menu [model]="links" [popup]="true" />
+  </div>
+</p-menubar>
+
+
+<div>
+  <router-outlet />
+</div>
+<footer class="footer">
+  <div class="">
+    <span class="text-muted">© 2023 AngularPillarMaster</span>
+    <span class="text-muted float-end">Powered by Angular</span>
+  </div>
+</footer>
