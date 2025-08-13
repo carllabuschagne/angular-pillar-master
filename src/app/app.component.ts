@@ -31,7 +31,13 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
+
+  production = environment.production;
+  apiUrl = environment.apiUrl;
+  debugMode = environment.debugMode;
   title = environment.title;
+
+
 
   items: MenuItem[] | undefined;
 

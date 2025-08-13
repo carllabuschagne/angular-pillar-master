@@ -3,7 +3,7 @@ import {
   NgClass,
   NgIf,
   NgStyle
-} from "./chunk-ZGLQ6OHR.js";
+} from "./chunk-SXY6L2PV.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -12,7 +12,6 @@ import {
   NgModule,
   Output,
   ViewEncapsulation$1,
-  __spreadValues,
   setClassMetadata,
   ɵɵNgOnChangesFeature,
   ɵɵadvance,
@@ -38,7 +37,10 @@ import {
   ɵɵtemplateRefExtractor,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-LFQQMFDS.js";
+} from "./chunk-CV4GJ3OJ.js";
+import {
+  __spreadValues
+} from "./chunk-TLZ7NF3X.js";
 
 // node_modules/primeng/fesm2022/primeng-avatar.mjs
 var _c0 = ["*"];
