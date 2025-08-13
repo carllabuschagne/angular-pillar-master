@@ -1,13 +1,13 @@
 import {
   PrimeNGConfig
-} from "./chunk-E3FKJRX4.js";
+} from "./chunk-XAELGYWP.js";
 import {
   DomHandler
 } from "./chunk-BUGEQH7Q.js";
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-ZGLQ6OHR.js";
+} from "./chunk-SXY6L2PV.js";
 import {
   Directive,
   ElementRef,
@@ -22,7 +22,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
-} from "./chunk-LFQQMFDS.js";
+} from "./chunk-CV4GJ3OJ.js";
 
 // node_modules/primeng/fesm2022/primeng-ripple.mjs
 var Ripple = class _Ripple {
@@ -193,4 +193,4 @@ export {
   Ripple,
   RippleModule
 };
-//# sourceMappingURL=chunk-NP7K53JM.js.map
+//# sourceMappingURL=chunk-LJJOKWJ7.js.map
