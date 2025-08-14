@@ -13,7 +13,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run in root
 ng generate environments
 
-    ng generate guard auth
+
+ng generate guard auth
 
 ## Build
 
