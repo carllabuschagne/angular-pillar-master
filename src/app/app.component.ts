@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
@@ -12,6 +12,8 @@ import { MenuModule } from 'primeng/menu';
 import { CardModule } from 'primeng/card';
 import { environment } from '../environments/environment';
 import { Title } from '@angular/platform-browser';
+import { AuthService } from '@auth0/auth0-angular';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -31,19 +33,22 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-
   production = environment.production;
   apiUrl = environment.apiUrl;
   debugMode = environment.debugMode;
   title = environment.title;
 
-
-
   items: MenuItem[] | undefined;
 
   links: MenuItem[] | undefined;
 
-  constructor(private titleService: Title) {
+  isAuhtnticated = false;
+
+  constructor(
+    private titleService: Title,
+    private auth: AuthService,
+    @Inject(DOCUMENT) public document: Document
+  ) {
     this.titleService.setTitle(this.title);
   }
 
@@ -101,12 +106,12 @@ export class AppComponent implements OnInit {
       {
         label: 'Log In',
         icon: 'pi pi-star',
-        routerLink: '/login',
+        command: () => this.login(),
       },
       {
         label: 'Logout',
         icon: 'pi pi-envelope',
-        routerLink: '/login',
+        command: () => this.logout(),
       },
       {
         label: 'Settings',
@@ -114,5 +119,17 @@ export class AppComponent implements OnInit {
         routerLink: '/settings',
       },
     ];
+  }
+
+  logout() {
+    this.auth.logout({
+      logoutParams: {
+        returnTo: this.document.location.origin,
+      },
+    });
+  }
+
+  login() {
+    this.auth.loginWithRedirect();
   }
 }
