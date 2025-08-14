@@ -25,8 +25,6 @@ import { CardModule } from 'primeng/card';
     CardModule,
   ],
   templateUrl: './settings.component.html',
-  styleUrl: './settings.component.css'
+  styleUrl: './settings.component.css',
 })
-export class SettingsComponent {
-
-}
+export class SettingsComponent {}
