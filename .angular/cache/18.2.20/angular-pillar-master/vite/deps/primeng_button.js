@@ -1,9 +1,12 @@
 import {
   Ripple
-} from "./chunk-LJJOKWJ7.js";
+} from "./chunk-73COFFWF.js";
 import {
   BaseIcon
 } from "./chunk-JNWW7QNI.js";
+import {
+  DomHandler
+} from "./chunk-BUGEQH7Q.js";
 import {
   ObjectUtils,
   PrimeTemplate,
@@ -11,16 +14,13 @@ import {
   UniqueComponentId
 } from "./chunk-XAELGYWP.js";
 import {
-  DomHandler
-} from "./chunk-BUGEQH7Q.js";
-import {
   DOCUMENT,
   NgClass,
   NgIf,
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-SXY6L2PV.js";
+} from "./chunk-NYWYP5CD.js";
 import {
   ChangeDetectionStrategy,
   Component,

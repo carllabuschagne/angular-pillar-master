@@ -5,7 +5,7 @@ import {
   CommonModule,
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-SXY6L2PV.js";
+} from "./chunk-NYWYP5CD.js";
 import {
   Directive,
   ElementRef,

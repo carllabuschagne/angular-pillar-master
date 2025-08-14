@@ -15,7 +15,13 @@
         return this.auth.isAuthenticated$.pipe(
           tap(isAuthenticated => {
             if (!isAuthenticated) {
-              this.auth.loginWithRedirect({ appState: { target: this.router.url } });
+              //this.auth.loginWithRedirect({ appState: { target: this.router.url } });
+              alert('You must be logged in to access this page.');
+              //this.router.navigate(['/login']);
+            } else {
+             alert('authenticated');
+              // Optionally, you can redirect to a specific page after login
+              // this.router.navigate(['/dashboard']);
             }
           })
         );
